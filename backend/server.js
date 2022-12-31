@@ -6,12 +6,11 @@ const mongoose = require("mongoose");
 // routes
 const workoutRotuer = require("./routes/workouts");
 
+// app config
 const app = express();
 
 app.use(express.json());
-app.use((req, res, next) => {
-  next();
-});
+
 
 app.use("/api/workout", workoutRotuer);
 
